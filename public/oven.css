@@ -1,0 +1,48 @@
+#cover {
+    width: 100%;
+    z-index: -1; /* Set a lower z-index for the image */
+  }
+
+  #Avail {
+    text-align: center;
+    font-size: 36px; /* Adjust font size for smaller screens */
+    font-weight: bold;
+    color: darkgrey;
+    margin-top: 50px; /* Adjust margin for smaller screens */
+  }
+
+  .card {
+    transition: transform 0.3s ease; /* Add transition effect to card */
+  }
+
+  .card:hover {
+    transform: translateY(-10px); /* Move card up on hover */
+  }
+
+  .card-img-top {
+    height: 200px; /* Fixed height for all images */
+    width: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire space */
+    transition: transform 0.3s ease; /* Add transition effect to image */
+  }
+
+  .card:hover .card-img-top {
+    transform: scale(1.1); /* Enlarge image on hover */
+  }
+
+  .width {
+    width: 100%; /* Set width to 100% for smaller screens */
+  }
+
+  .container {
+    margin-top: 50px; /* Adjust margin for smaller screens */
+    padding: 10px;
+  }
+
+  .card-body {
+    text-align: center; /* Center align text */
+  }
+
+  .btn-order {
+    margin-top: 10px; /* Add some space between button and text */
+  }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oven Express</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="oven.css"> <!-- Your custom CSS file -->
+</head>
+<body>
+    <div>
+        <img src="Images/oven/OVEN EXPRESS.png" alt="Ke Image" id="cover">
+       
+    </div>
+<h1 id="Avail">Available Items</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 width">
+      <div class="card">
+        <img src="Images/thalis.jpg" class="card-img-top" alt="Food 1">
+        <div class="card-body">
+          <h5 class="card-title">Special Thali</h5>
+          <p class="card-text">Price:Rs 100</p>
+          <a href="#" class="btn btn-primary btn-order">Order Now</a>
+          <button onclick="addToCart('Special Thali', 10)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Images/thali.jpg" class="card-img-top" alt="Food 2">
+        <div class="card-body">
+          <h5 class="card-title">Normal Thali</h5>
+          <p class="card-text">Price: Rs 80</p>
+          <a href="#" class="btn btn-primary btn-order">Order Now</a>
+          <button onclick="addToCart('Normal Thali', 10)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="Images/oven/paneer-butter-masala-5.webp" class="card-img-top" alt="Food 3">
+        <div class="card-body">
+          <h5 class="card-title">Paneer Butter Masala</h5>
+          <p class="card-text">Price: Rs 150</p>
+          <a href="#" class="btn btn-primary btn-order">Order Now</a>
+          <button onclick="addToCart('Paneer Butter Masala', 10)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/oven/Handi.jpg" class="card-img-top" alt="Food 1">
+          <div class="card-body">
+            <h5 class="card-title">Handi Biryani</h5>
+            <p class="card-text">Price:Rs 150</p>
+            <a href="#" class="btn btn-primary btn-order">Order Now</a>
+            <button onclick="addToCart('Handi Biryani', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/oven/Butter Naan.webp" class="card-img-top" alt="Food 2">
+          <div class="card-body">
+            <h5 class="card-title">Butter Naan</h5>
+            <p class="card-text">Price: Rs 25</p>
+            <a href="#" class="btn btn-primary btn-order">Order Now</a>
+            <button onclick="addToCart('Butter Naan', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/oven/Laccha.jpg" class="card-img-top" alt="Food 3">
+          <div class="card-body">
+            <h5 class="card-title">Lacchaa</h5>
+            <p class="card-text">Price: Rs 35</p>
+            <a href="#" class="btn btn-primary btn-order">Order Now</a>
+            <button onclick="addToCart('Lacchha', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/oven/Afgani champ.webp" class="card-img-top" alt="Food 1">
+          <div class="card-body">
+            <h5 class="card-title">Afgani Champ</h5>
+            <p class="card-text">Price:Rs 80</p>
+            <a href="#" class="btn btn-primary btn-order">Order Now</a>
+            <button onclick="addToCart('Afgani Champ', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/oven/MNcombo.jpg" class="card-img-top" alt="Food 2">
+          <div class="card-body">
+            <h5 class="card-title">Manchurian Noodles combo</h5>
+            <p class="card-text">Price: Rs 80</p>
+            <a href="#" class="btn btn-primary btn-order">Order Now</a>
+            <button onclick="addToCart('Manchurian Noodles combo', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Images/oven/caa2a6bb-a301-4252-89f7-00c6171f4a36.webp" class="card-img-top" alt="Food 3">
+          <div class="card-body">
+            <h5 class="card-title">Nugget Rice Bowl</h5>
+            <p class="card-text">Price: Rs 100</p>
+            <a href="#" class="btn btn-primary btn-order">Order Now</a>
+            <button onclick="addToCart('Nugget Rice Bowl', 10)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Define an array to store cart items
+    let cartItems = [];
+
+    // Function to add an item to the cart
+    function addToCart(itemName, price) {
+        // Create an object representing the item
+        const item = {
+            name: itemName,
+            price: price
+        };
+
+        // Push the item object into the cartItems array
+        cartItems.push(item);
+
+        // Display a confirmation message
+        alert(itemName + " added to cart!");
+
+        // Optionally, you can update the cart display here
+        // For example, you can update the total price or display the cart contents
+    }
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

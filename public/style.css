@@ -1,0 +1,341 @@
+.nav-container {
+    position: relative; /* Change position to relative */
+    width: 100%; /* Ensure full width */
+}
+
+.nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    margin-top: 50px; /* Move margin-top here */
+    list-style: none;
+    z-index: 1; /* Ensure navigation is above the image */
+    padding-left: 0; /* Remove default padding */
+}
+
+#cover {
+    width: 100%;
+    z-index: 0; /* Set a lower z-index for the image */
+}
+
+.nav {
+    margin-left: 50px;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.nav-links li a {
+    color: #ffffff; /* Default color */
+    text-decoration: none; /* Remove wavy text decoration */
+}
+
+.nav-links li a:hover {
+    color: #ffc107; /* Color on hover */
+}
+.profile {
+    margin-left: auto; /* Pushes the profile to the right */
+    margin-right: 20px; /* Add some right margin */
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Change text color */
+}
+
+.profile a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
+.profile img {
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile #username {
+    font-size: 16px; /* Adjust as needed */
+}
+.carousel-slide{
+    margin-top: 100px;
+}
+.switch{
+    margin-left: 600px;
+}
+
+#Avail {
+    text-align: center;
+    color: rgb(102, 100, 100);
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#Store {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+  .SDes {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: calc(33.33% - 40px); /* Set width for each card with some spacing */
+    min-height: 600px; /* Set minimum height for uniformity */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+  }
+
+  .SDes:hover {
+    transform: translateY(-5px);
+  }
+
+  .SDes h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .SDes img {
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+    border-radius: 5px;
+  }
+
+  .my-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  .my-button:hover {
+    background-color: #0056b3;
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a9a3a3; /* Light grey background */
+    color: #333; /* Dark grey text color */
+}
+
+header {
+    background-color: #333; /* Dark grey header background */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 20px 0;
+}
+.about-section{
+    width: 100%;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #716d6d; /* White container background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(31, 30, 30, 0.1); /* Shadow effect */
+}
+
+.container h2 {
+    color: #333; /* Dark grey heading color */
+    border-bottom: 2px solid #282828; /* Dark grey underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-family: bold;
+}
+
+.container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #333; /* Dark grey footer background */
+    color: #fff; /* White text color */
+    padding: 20px 0;
+}
+
+.about-section {
+    width: 100%;
+}
+
+#ih {
+    height: 80%;
+}
+
+#bname {
+    text-decoration: none;
+    color: darkgray;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        color: #fff;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+body {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added color transition */
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background color */
+    color: #333; /* Dark text color */
+  }
+
+
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+      }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  /* Additional styles for dark theme */
+  body.dark-theme {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+  }
+  body.dark-theme #Store{
+    background-color: grey;
+  }
+  body.dark-theme .abtext{
+    color: rgb(26, 26, 26);
+  }
+ .im{
+    height: 400px;
+    width: 400px;
+ }
+ #myCarousel{
+    margin-top: 200px;
+ }
+ body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+header, .about-section, footer {
+    background-color: #f8f8f8; /* Light beige background color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #333; /* Dark grey header text color */
+}
+
+.abtext {
+    color: #444; /* Dark grey text color */
+    line-height: 1.6;
+}
+
+footer {
+    border-top: 2px solid #ffcc66; /* Yellow border on the top of the footer */
+}
+
+footer p {
+    margin: 0;
+    color: #333; /* Dark grey text color */
+}
+
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    .abtext {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+}

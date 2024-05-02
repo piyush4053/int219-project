@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RelQ</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="nav-container">
+    <!--<div class="logo">
+            <a href="#">Restaurant Name</a>
+        </div>-->
+    <ul class="nav-links">
+      <li class="nav"><a href="#home.html">HOME</a></li>
+      <li class="nav"><a href="rest.html">ADD RESTAURANT </a></li>
+      <li class="nav"><a href="#about-section">ABOUT US</a></li>
+      <li class="nav"><a href="login.html">LOGIN</a></li>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider moon"></span>
+      </label>
+    </ul>
+    <img src="Images\RelQ Relax! Until we Bring Happiness.png" alt="Cover" id="cover">
+  </nav>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+  
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="Images/KE.jpeg" alt="Los Angeles" class="im">
+      </div>
+  
+      <div class="item">
+        <img src="Images/PHouse.webp" alt="Chicago" class="im">
+      </div>
+  
+      <div class="item">
+        <img src="Images/OEXP.png" alt="New York" class="im">
+      </div>
+    </div>
+  
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <h1 id="Avail">AVAILABLE RESTAURANTS</h1>
+  <div id="Store">
+    <div class="SDes">
+      <h1>Protein House</h1>
+      <a href="PHouse.html" target="_blank">
+        <img src="Images/PHouse.webp" alt="PHouse" class="img">
+      </a>
+      <a href="PHouse.html" class="btn btn-primary btn-lg my-button custom-link-button">SELECT</a>
+
+    </div>
+    <div class="SDes" id="ke">
+      <h1>Kitchen Ette</h1>
+      <a href="KE.html" target="_blank">
+        <img src="Images/KE.jpeg" alt="PHouse" class="img">
+      </a>
+      <a href="KE.html" class="btn btn-primary btn-lg my-button custom-link-button">SELECT</a>
+
+    </div>
+    <div class="SDes">
+      <h1>Oven Express </h1>
+      <a href="Oven.html" target="_blank">
+        <img src="Images/OEXP.png" alt="PHouse" class="img">
+      </a>
+      <a href="Oven.html" class="btn btn-primary btn-lg my-button custom-link-button">SELECT</a>
+
+    </div>
+  </div>
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <section id="about-section" class="about-section">
+    <div class="ab">
+      <h2 class="abtext">Welcome to RelQ</h2>
+      <p class="abtext">We are RelQ, dedicated to saving your time by making it possible to order food beforehand and
+        pick it up just on time, eliminating the need to wait in long queues when dining in. Our innovative approach
+        aims to provide convenience and efficiency without compromising on the quality of your dining experience.</p>
+      <p class="abtext">Address: Lovely Professional University, Jalandhar</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 RelQ. All rights reserved.</p>
+  </footer>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const themeToggle = document.getElementById('themeToggle');
+
+      themeToggle.addEventListener('change', function () {
+        if (this.checked) {
+          document.body.classList.add('dark-theme');
+        } else {
+          document.body.classList.remove('dark-theme');
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

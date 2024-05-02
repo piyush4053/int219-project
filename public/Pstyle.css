@@ -1,0 +1,18 @@
+.nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    margin-top: 50px; /* Move margin-top here */
+    list-style: none;
+    z-index: 1; /* Ensure navigation is above the image */
+    padding-left: 0; /* Remove default padding */
+}
+
+#cover {
+    width: 100%;
+    z-index: 0; /* Set a lower z-index for the image */
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Restaurant</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('Images/RelQ Relax! Until we Bring Happiness.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            width: 80%;
+            max-width: 400px; /* Adjust as needed */
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            margin-bottom: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Add Restaurant</h1>
+            <form id="restaurantForm">
+                <div class="form-group">
+                    <label for="ownerName">Owner Name:</label>
+                    <input type="text" class="form-control" id="ownerName" placeholder="Enter owner name" required>
+                </div>
+                <div class="form-group">
+                    <label for="restaurantName">Restaurant Name:</label>
+                    <input type="text" class="form-control" id="restaurantName" placeholder="Enter restaurant name" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <select class="form-control" id="location" required>
+                        <option value="">Select Location</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <!-- Add more options for other locations as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gst">GSTIN:</label>
+                    <input type="text" class="form-control" id="gst" placeholder="Enter GSTIN" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById("restaurantForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Form Submitted! Email for further process will be shared.");
+            // Here you can add code to send the form data to your server for further processing
+        });
+    </script>
+</body>
+</html>
